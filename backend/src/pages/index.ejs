@@ -1,0 +1,21 @@
+<%- include('header'); -%>
+
+  <main>
+    <div class="container">
+      <% anime.forEach(data=> { %>
+        <ul class="anime">
+          <li><img src="<%= data.image %>" alt="<%= data.name %>" class="anime-img" /></li>
+          <li>
+            <h1>
+              <%= data.name %>
+            </h1>
+          </li>
+
+          <li>
+            <a href="/<%= data.id %>">View Anime &#x21DB;</a>
+          </li>
+        </ul>
+        <% }) %>
+    </div>
+  </main>
+  <%- include('footer'); -%>
